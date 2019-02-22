@@ -17,18 +17,18 @@ import android.widget.Toast;
 public abstract class PermissionUtils {
 
     /**
-     * Requests the fine location permission. If a rationale with an additional explanation should
-     * be shown to the user, displays a dialog that triggers the request.
-     * Hace el request de los permisos de localización
+     * Este método hace el request de los permisos de localización. Si es necesario algun mensaje
+     * con explicación adicional para el usuario , se despliega un dialogo that dispara el request.
      */
     public static void requestPermission(AppCompatActivity activity, int requestId,
                                          String permission, boolean finishActivity) {
         if (ActivityCompat.shouldShowRequestPermissionRationale(activity, permission)) {
-            // Display a dialog with rationale.
+            // Despliega un diaologo con la explicacion
             RationaleDialog.newInstance(requestId, finishActivity)
                     .show(activity.getSupportFragmentManager(), "dialog");
         } else {
-            // Location permission has not been granted yet, request it.
+
+            //El Permiso de localicacion no ha sido permitida aún, hacer el request
             ActivityCompat.requestPermissions(activity, new String[]{permission}, requestId);
 
         }
