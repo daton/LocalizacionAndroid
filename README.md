@@ -44,6 +44,7 @@ Despues del método ##setContentView##  declara lo siguiente
                     // ...
                 }
             }
+          }
             
                 enableMyLocation()
 ```
