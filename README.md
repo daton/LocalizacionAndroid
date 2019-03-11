@@ -1,4 +1,12 @@
 
+# Geolocalizacion
+
+## Implementamos la dependencia de geolocalización
+
+```
+  implementation 'com.google.android.gms:play-services-location:15.0.0'
+```
+
 ## Implementar la siguiente interface
 
 
